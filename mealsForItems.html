@@ -11,29 +11,28 @@
 <body>
 	<div class="appContainer">
 		<span id="headlineContainer">
-			<h1>How much is your coffee worth?</h1>
+			<h1>How much is your <span data-bind=" text : currentTitle"></span> worth?</h1>
 		</span>
 		<div class="itemsContentBox">
-			<p id="itemsToMealsbanner">For a donation equal to the price of the average cup of coffee Philabunace can provide 5 meals to neighbors in need! Make it a latte and it's 7 meals!</p>
+			<p id="itemsToMealsbanner" data-Bind=" text: currentBanner"></p>
 			<div id="equationContainer">
-				<img src="images/coffee.png">
+				<img id="equationIcon" data-bind=" attr : {src : currentImage, alt: stockImage}">
 				<img style="height: auto; width: auto;max-height: 70px; padding-top: 10%;" src="images/equals.png">
 				<div id="equationText">
-					<h1>5 to 7 meals!</h1>
+					<h1 data-bind="text : currentMeals"></h1>
 				</div>
 			</div>
 		</div>
 		<div class="imageContainer">
 			<ul id="iconsList" data-bind="foreach : iconsArray">
-          		<img id="icon" data-bind="attr: {src: $data, alt: stockImage}">
+          		<img id="icon" data-bind="attr: {src: $data.image, alt: stockImage, id : $data.title}">
           		<br>
         	</ul>
 		</div>
 	</div>
 <script>
-var stockImage = "No Image Found"
 ko.applyBindings(viewModel);
-viewModel.getIcons();
+viewModel.init();
 </script>
 </body>
 </html>
