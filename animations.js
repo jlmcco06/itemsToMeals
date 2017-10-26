@@ -1,4 +1,6 @@
-var model = {
+let stockImage = "No Image Found";
+let cycleSpot = 0;
+let model = {
 	icons : [
 	{
 		title : "coffee",
@@ -18,16 +20,37 @@ var model = {
 	]
 }
 
-var viewModel = {
-	iconsArray : ko.observableArray(),
+let viewModel = {
+	init : function () {
+		this.setCycleSpot(cycleSpot);
+	},
 
-	getIcons: function () {
-		//iterate over icons array and extract images for use in the iconsArray
-		icons = [];
-		for (i = 0; i < model.icons.length ; i ++) {
-			icon = model.icons[i].image;
-			icons.push(icon);
+	iconsArray : ko.observableArray(model.icons),
+	currentMeals : ko.observable(),
+	currentBanner : ko.observable(),
+	currentTitle : ko.observable(),
+	currentImage : ko.observable(),
+
+	setCycleSpot : function (cycleSpot) {
+		spot = model.icons[cycleSpot];
+		this.currentImage(spot.image);
+		this.currentTitle(spot.title);
+		this.currentBanner(spot.banner);
+		this.currentMeals(spot.meals);
+		this.setTimer();
+	},
+
+	setTimer : function() {
+		setInterval(viewModel.nextSpot, 7000);
+	},
+
+	nextSpot : function() {
+		if (cycleSpot === 2) {
+			clearInterval(viewModel.setTimer);
+		} else {
+			cycleSpot += 1;
+			viewModel.setCycleSpot(cycleSpot);
 		}
-		this.iconsArray(icons);
+		console.log(cycleSpot);
 	}
 }
