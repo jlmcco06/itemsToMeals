@@ -5,18 +5,18 @@ let model = {
 	{
 		title : "coffee",
 		image: "images/coffee.png",
-		banner: "For the price of the average cup of coffee Philabundance can provide 5 meals to neighbors in need! Make it a latte and it's 7 meals!",
-		meals: "5 to 7 meals!"},
+		banner: "For the price of the average cup of coffee Philabundance can provide 5 meals to neighbors in need!",
+		meals: "5 meals!"},
 	{
 		title: "dinner",
 		image: "images/dinner.png",
 		banner: "For the cost of the average Philadelphia 'dinner out' Philabunace can feed 60 hungery people!",
-		meals: "60 meals"},
+		meals: "60 meals!"},
 	{
 		title: "vacation",
 		image:"images/vacation.png",
 		banner: "For less than the cost of a family vacation you can change a life, by sponsoring a student at the Philabundance Community Kitchen!",
-		meals: "Priceless"}
+		meals: "Priceless!"}
 	]
 }
 
