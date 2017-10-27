@@ -1,5 +1,5 @@
 body {
-	font: 13px/1.6em Arial,Verdana,"lucida grande",Tahoma, sans-serif,'Liberation Sans';
+	font: 13px/1.6em "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
 	height: 100%
 	width: 100%;
 	padding: 0;
@@ -23,12 +23,17 @@ body {
 	padding: 1%;
 }
 
+.appContainer #headlineContainer #hlEmbeddedTitle {
+	color: #ab3ab7;
+}
+
 .itemsContentBox {
 	padding-top: 5%;
 	padding-left: 3%;
 	height: 100%;
 	width: 60%;
 	align-items: center;
+	float: right;
 }
 
 .itemsContentBox p {
