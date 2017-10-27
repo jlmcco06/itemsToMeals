@@ -57,13 +57,13 @@ body {
 
 .itemsContentBox #equationText h1 {
 	height: 40%;
-	width: 30%;
+	width: 40%;
 	max-height: 150px;
 	position: relative;
-	font-size: 400%;
+	font-size: 500%;
 	line-height: 100%;
 	float: left;
-	padding-top: 2%;
+	padding-top: 5%;
 }
 
 .imageContainer {
@@ -76,9 +76,17 @@ body {
 	height: auto;
 	width: auto;
 	max-height: 90px;
+	padding: 1%;
 }
-#iconsList {
+.imageContainer ul {
 	display: flex;
 	flex-direction: column;
+	list-style-type: none;
+}
+.imageContainer li {
+	height: 100%;
+	width: 100%;
+	padding: 2%;
+
 }
 

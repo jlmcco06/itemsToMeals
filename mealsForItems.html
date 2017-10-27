@@ -11,7 +11,7 @@
 <body>
 	<div class="appContainer">
 		<span id="headlineContainer">
-			<h1>How much is your <span data-bind=" text : currentTitle"></span> worth?</h1>
+			<h1>How much is your <span id="hlEmbeddedTitle" data-bind=" text : currentTitle"></span> worth?</h1>
 		</span>
 		<div class="itemsContentBox">
 			<p id="itemsToMealsbanner" data-Bind=" text: currentBanner"></p>
@@ -25,7 +25,7 @@
 		</div>
 		<div class="imageContainer">
 			<ul id="iconsList" data-bind="foreach : iconsArray">
-          		<img id="icon" data-bind="attr: {src: $data.image, alt: stockImage, id : $data.title}">
+          		<img data-bind="attr: {src: $data.image, alt: stockImage, id: $data.cycleSpotPos}, click : $parent.setCycleSpot($data.cycleSpotPos)"
           		<br>
         	</ul>
 		</div>
