@@ -10,7 +10,6 @@ body {
 	height: 100%;
 	width: 100%;
 	max-height: 500px;
-	max-width: 1500px;
 	color: white;
 	background-color: #076324;
 	display: inline-flex;
@@ -57,13 +56,12 @@ body {
 
 .itemsContentBox #equationText h1 {
 	height: 40%;
-	width: 40%;
+	width: 55%;
 	max-height: 150px;
 	position: relative;
-	font-size: 500%;
+	font-size: 700%;
 	line-height: 100%;
 	float: left;
-	padding-top: 5%;
 }
 
 .imageContainer {
@@ -71,6 +69,7 @@ body {
 	width: 10%;
 	float: right;
 	padding: 2%;
+	padding-top: 4%;
 }
 .imageContainer img {
 	height: auto;
@@ -87,6 +86,69 @@ body {
 	height: 100%;
 	width: 100%;
 	padding: 2%;
+
+}
+
+@media screen and (max-width: 1285px) {
+	.appContainer {
+		height: auto;
+		max-height: 1200px;
+		width: auto;
+		max-width: 1024px;
+		flex-direction: column;
+		padding-right: 2%;
+	}
+	.appContainer #headlineContainer {
+		width: 90%;
+		height: 20%;
+		padding-bottom: none;
+		padding-right: 5%;
+	}
+	.itemsContentBox {
+		width: 80%;
+		height: 70%;
+		padding-top: 1%;
+	}
+	.itemsContentBox #equationText h1 {
+		font-size: 600%;
+		padding-top: 5%;
+	}
+	.itemsContentBox #equationConatiner #eqationIcon img {
+		padding-top: 5%;
+	}
+	.imageContainer {
+		height: 10%;
+		width: 50%;
+		align-items: center;
+		padding-left: 20%;
+	}
+	.imageContainer ul {
+		flex-direction: row;
+		align-items: center;
+	}
+}
+
+@media screen and (max-width: 990px) {
+	.itemsContentBox #equationText h1 {
+		font-size: 500%;
+		padding-top: 3%;
+	}
+	.imageContainer{
+		padding-left: 0%;
+		width: 40%;
+	}
+	.imageContainer li {
+		padding: 0%;
+	}
+	.imageContainer ul {
+		padding-left: 0%;
+	}
+	.imageContainer img {
+		height: auto;
+		width: auto;
+		max-height: 80px;
+		padding: 1%;
+	}
 
 }
 
