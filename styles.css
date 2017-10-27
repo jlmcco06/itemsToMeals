@@ -54,6 +54,13 @@ body {
 	padding-left: 10%;
 }
 
+.itemsContentBox #equalSign {
+	height: auto;
+	width: auto;
+	max-height: 70px;
+	padding-top: 8%;
+}
+
 .itemsContentBox #equationText h1 {
 	height: 40%;
 	width: 55%;
@@ -90,65 +97,150 @@ body {
 }
 
 @media screen and (max-width: 1285px) {
+
+.appContainer #headlineContainer {
+	height: 100%;
+	width: 20%;
+	font-size: 200%;
+	line-height: 140%;
+	padding: 1%;
+}
+
+.itemsContentBox {
+	padding-left: 1%;
+}
+
+.itemsContentBox p {
+	font-size: 150%;
+	line-height: 100%;
+}
+
+.itemsContentBox #equationIcon {
+	padding: 2%;
+	height: auto;
+	width: auto;
+	max-height: 100px;
+	float: left;
+}
+
+.itemsContentBox #equalSign {
+	height: auto;
+	width: auto;
+	max-height: 40px;
+	padding-top: 10%;"
+}
+
+.itemsContentBox #equationText h1 {
+	height: 40%;
+	width: 55%;
+	max-height: 150px;
+	position: relative;
+	font-size: 500%;
+	line-height: 100%;
+	float: left;
+}
+
+.imageContainer {
+	height: 100%;
+	width: 10%;
+	float: left;
+	padding-top: 4%;
+	padding-left: none;
+}
+
+.imageContainer ul {
+	display: flex;
+	flex-direction: column;
+	list-style-type: none;
+	padding-left: 0;
+	float: left;
+}
+
+.imageContainer img {
+	height: auto;
+	width: auto;
+	max-height: 70px;
+	max-width: 90px;
+	padding: 1%;
+}
+}
+
+@media screen and (max-width: 980px) {
 	.appContainer {
-		height: auto;
-		max-height: 1200px;
-		width: auto;
-		max-width: 1024px;
+		height: 100%;
+		width: 100%;
+		max-height: 1000px;
+		color: white;
+		background-color: #076324;
+		display: flex;
 		flex-direction: column;
-		padding-right: 2%;
 	}
 	.appContainer #headlineContainer {
-		width: 90%;
 		height: 20%;
-		padding-bottom: none;
-		padding-right: 5%;
+		width: 80%;
+		font-size: 200%;
+		line-height: 140%;
+		padding: 1%;
 	}
 	.itemsContentBox {
+		padding-left: 3%;
+		height: 40%;
+		width: 100%;
+		align-items: center;
+		float: right;
+	}
+	.itemsContentBox p {
+		font-size: 200%;
+		line-height: 100%;
+		width: 70%;
+	}
+
+	.itemsContentBox #equationConatiner {
 		width: 80%;
-		height: 70%;
-		padding-top: 1%;
+		display: inline-block;
+		padding-left: 10%;
+	}
+	.itemsContentBox #equationIcon {
+		padding: 2%;
+		height: auto;
+		width: auto;
+		max-height: 70px;
+		float: left;
+	}
+
+	.itemsContentBox #equalSign {
+		height: auto;
+		width: auto;
+		max-height: 30px;
 	}
 	.itemsContentBox #equationText h1 {
-		font-size: 600%;
-		padding-top: 5%;
-	}
-	.itemsContentBox #equationConatiner #eqationIcon img {
+		font-size: 200%;
 		padding-top: 5%;
 	}
 	.imageContainer {
 		height: 10%;
-		width: 50%;
-		align-items: center;
-		padding-left: 20%;
-	}
-	.imageContainer ul {
-		flex-direction: row;
-		align-items: center;
-	}
-}
-
-@media screen and (max-width: 990px) {
-	.itemsContentBox #equationText h1 {
-		font-size: 500%;
-		padding-top: 3%;
-	}
-	.imageContainer{
-		padding-left: 0%;
-		width: 40%;
+		width: 100%;
+		float: left;
+		padding-top: 4%;
+		padding-left: 1%;
 	}
 	.imageContainer li {
 		padding: 0%;
 	}
 	.imageContainer ul {
 		padding-left: 0%;
+		display: flex;
+		flex-direction: row;
+		float: left;
 	}
 	.imageContainer img {
 		height: auto;
 		width: auto;
-		max-height: 80px;
+		max-height: 60px;
 		padding: 1%;
 	}
 
 }
+
+
 
