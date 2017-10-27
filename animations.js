@@ -5,17 +5,17 @@ let model = {
 	{
 		title : "coffee",
 		image: "images/coffee.png",
-		banner: "For the price of the average cup of coffee Philabunace can provide 5 meals to neighbors in need! Make it a latte and it's 7 meals!",
+		banner: "For the price of the average cup of coffee Philabundance can provide 5 meals to neighbors in need! Make it a latte and it's 7 meals!",
 		meals: "5 to 7 meals!"},
 	{
 		title: "dinner-out",
 		image: "images/chefHat.png",
-		banner: "For the cost on the average Philabunace 'dinner out' Philabunace can feed 60 hungery people!",
+		banner: "For the cost on the average Philabundance 'dinner out' Philabunace can feed 60 hungery people!",
 		meals: "60 meals"},
 	{
 		title: "vacation",
 		image:"images/vacation.png",
-		banner: "For less than the cost of a family vacation, you can change a life, by sponsoring a student at teh Philabundance Community Kitchen!",
+		banner: "For less than the cost of a family vacation you can change a life, by sponsoring a student at the Philabundance Community Kitchen!",
 		meals: "priceless"}
 	]
 }
@@ -46,11 +46,10 @@ let viewModel = {
 
 	nextSpot : function() {
 		if (cycleSpot === 2) {
-			clearInterval(viewModel.setTimer);
+			cycleSpot = 0;
 		} else {
 			cycleSpot += 1;
 			viewModel.setCycleSpot(cycleSpot);
 		}
-		console.log(cycleSpot);
 	}
 }
