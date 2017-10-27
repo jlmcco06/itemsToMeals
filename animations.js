@@ -8,21 +8,29 @@ let model = {
 		banner: "For the price of the average cup of coffee Philabundance can provide 5 meals to neighbors in need! Make it a latte and it's 7 meals!",
 		meals: "5 to 7 meals!"},
 	{
-		title: "dinner-out",
-		image: "images/chefHat.png",
-		banner: "For the cost on the average Philabundance 'dinner out' Philabunace can feed 60 hungery people!",
+		title: "dinner",
+		image: "images/dinner.png",
+		banner: "For the cost of the average Philadelphia 'dinner out' Philabunace can feed 60 hungery people!",
 		meals: "60 meals"},
 	{
 		title: "vacation",
 		image:"images/vacation.png",
 		banner: "For less than the cost of a family vacation you can change a life, by sponsoring a student at the Philabundance Community Kitchen!",
-		meals: "priceless"}
+		meals: "Priceless"}
 	]
 }
 
 let viewModel = {
 	init : function () {
 		this.setCycleSpot(cycleSpot);
+		var timer = setInterval(function() {
+			if (cycleSpot === 2) {
+				clearInterval(timer);
+			} else {
+				cycleSpot += 1;
+			}
+		viewModel.setCycleSpot(cycleSpot);
+	}, 7000);
 	},
 
 	iconsArray : ko.observableArray(model.icons),
@@ -37,19 +45,5 @@ let viewModel = {
 		this.currentTitle(spot.title);
 		this.currentBanner(spot.banner);
 		this.currentMeals(spot.meals);
-		this.setTimer();
-	},
-
-	setTimer : function() {
-		setInterval(viewModel.nextSpot, 7000);
-	},
-
-	nextSpot : function() {
-		if (cycleSpot === 2) {
-			cycleSpot = 0;
-		} else {
-			cycleSpot += 1;
-			viewModel.setCycleSpot(cycleSpot);
-		}
 	}
 }
